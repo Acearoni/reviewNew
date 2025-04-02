@@ -8,7 +8,7 @@ const CharacterSchema = mongoose.Schema({
         minLength: [2, "Character's name must be at least 2 letters."],
         maxLength: [20, "Charcter name is too long"]
     },
-    class: {
+    playerClass: {
         type: String,
         required: [true, "Must provide a class."],
         minLength: [4, "Class name must be at least 4 character's long."]

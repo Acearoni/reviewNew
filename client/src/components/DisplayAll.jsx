@@ -23,9 +23,11 @@ const {characterList, setCharacterList} = props
                 characterList.map((character) => (
                     <div key={character._id}>
                         <h2>Name: {character.name}</h2>
-                        <h2>Class: {character.class}</h2>
+                        <h2>Class: {character.playerClass}</h2>
                         <h2>Hometown: {character.hometown}</h2>
                         <h2>Level: {character.level}</h2>
+                        <button>EDIT</button>
+                        <button>DETAILS</button>
                         <br></br>
                         {/* <h3>Created: {character.createdAt}</h3> */}
                     </div>
