@@ -1,5 +1,6 @@
 import { useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const DisplayAll = (props) => {
 const {characterList, setCharacterList} = props
@@ -26,9 +27,9 @@ const {characterList, setCharacterList} = props
                         <h2>Class: {character.playerClass}</h2>
                         <h2>Hometown: {character.hometown}</h2>
                         <h2>Level: {character.level}</h2>
-                        <button>EDIT</button>
-                        <button>DETAILS</button>
+                        <Link to={`/edit/${character._id}`}>EDIT</Link>
                         <br></br>
+                        <Link to={`/character/${character._id}`}>DETAILS</Link>
                         {/* <h3>Created: {character.createdAt}</h3> */}
                     </div>
                 ))
